@@ -43,7 +43,7 @@ abstract Source<E>(SourceObject<E>) from SourceObject<E> to SourceObject<E> to S
           source = rest;
           native.once('drain', write);
         case Failed(e):
-          native.emit('error', new js.Error(e.message));
+          native.emit('error', new js.lib.Error(e.message));
       });
     }
     
